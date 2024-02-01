@@ -1,0 +1,20 @@
+name: ESLint and Prettier Check
+
+on: [pull_request]
+
+jobs:
+  eslint-prettier-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Run Prettier
+        run: npm run fmt
