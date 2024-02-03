@@ -1,12 +1,4 @@
-/**
- * Investment parameters interface.
- */
-interface InvestmentParams {
-  initialInvestment: number; // The initial investment amount
-  annualInvestment: number; // The amount invested every year
-  expectedReturn: number; // The expected (annual) rate of return
-  duration: number; // The investment duration (time frame) in years
-}
+import { InvestmentParams } from "../types/investment";
 
 /**
  * Calculate investment results based on provided parameters.
